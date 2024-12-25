@@ -3,59 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <title>Space Facts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        main {
+        #facts-container {
+            background: white;
             padding: 20px;
-            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
         }
 
-        button {
-            padding: 10px 20px;
+        #facts-container p {
             font-size: 16px;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Web Page</h1>
-    </header>
-    <main>
-        <p>This is a simple web page.</p>
-        <button id="myButton">Click Me!</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Web Page</p>
-    </footer>
+    <div id="facts-container"></div>
     <script>
-        document.getElementById('myButton').addEventListener('click', function() {
-            alert('Button was clicked!');
+        document.addEventListener('DOMContentLoaded', function() {
+            const facts = [
+                "Venus has the longest day of any planet in our solar system. One day on Venus is longer than one year on Venus.",
+                "It takes about 243 Earth days for Venus to complete one rotation on its axis.",
+                "Venus completes its orbit around the Sun in about 225 Earth days.",
+                "This means that a day on Venus is longer than its year!"
+            ];
+
+            const container = document.getElementById('facts-container');
+            facts.forEach(fact => {
+                const p = document.createElement('p');
+                p.textContent = fact;
+                container.appendChild(p);
+            });
         });
     </script>
 </body>
