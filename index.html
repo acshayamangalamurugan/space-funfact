@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Venus Facts</title>
+    <title>Interactive Space Facts</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #282c34;
+            background-color: #1e1e2f;
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -17,37 +17,38 @@
         }
 
         #facts-container {
-            background: #3b3f47;
+            background: #2c2c3e;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            width: 400px;
             text-align: center;
         }
 
         #facts-container p {
-            font-size: 18px;
+            font-size: 20px;
             line-height: 1.8;
             margin: 20px 0;
         }
 
         .button {
-            background-color: #61dafb;
+            background-color: #ff6f61;
             border: none;
-            color: #282c34;
-            padding: 10px 20px;
+            color: #ffffff;
+            padding: 12px 24px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            font-size: 18px;
+            margin: 6px 3px;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .button:hover {
-            background-color: #21a1f1;
+            background-color: #ff4b3e;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -60,13 +61,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const facts = [
-                "Venus has the longest day of any planet in our solar system. One day on Venus is longer than one year on Venus.",
-                "It takes about 243 Earth days for Venus to complete one rotation on its axis.",
-                "Venus completes its orbit around the Sun in about 225 Earth days.",
-                "This means that a day on Venus is longer than its year!",
-                "Venus is the hottest planet in our solar system with surface temperatures over 450°C (842°F).",
-                "Venus has a very thick atmosphere that traps heat, making it hotter than Mercury, even though Mercury is closer to the Sun.",
-                "The atmospheric pressure on Venus is 92 times greater than Earth's, equivalent to being 900 meters underwater on Earth."
+                "🌌 The universe is around 13.8 billion years old.",
+                "🌠 A day on Mercury lasts 59 Earth days.",
+                "🌕 The Moon is moving away from Earth at a rate of 3.8 cm per year.",
+                "🌟 There are more stars in the universe than grains of sand on all the Earth's beaches.",
+                "🚀 The hottest planet in our solar system is Venus, with surface temperatures over 450°C (842°F).",
+                "🪐 Saturn is the least dense planet in our solar system; it would float in water.",
+                "🌍 Earth is the only planet not named after a god."
             ];
 
             let currentFactIndex = 0;
